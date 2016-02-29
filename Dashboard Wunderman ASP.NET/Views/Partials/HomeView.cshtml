@@ -1,0 +1,11 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Dashboard_Wunderman_ASP.NET.Models.UserDisplayModel>
+
+<h1>Welcome</h1>
+
+@Html.ActionLink("Authenticate with Google", "AuthorizeGoogle", null, new { @class = "btn btn-primary btn-lg" })
+
+@if (!string.IsNullOrEmpty(Model.AccessToken))
+{
+    <h2>Google Details</h2>
+    <p>Access Token: @Model.AccessToken</p>
+}
